@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: white;
+}
+
+header {
+    background-color: #000000;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 2px solid #d4af37;
+}
+
+header h1 {
+    color: #d4af37;
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 10px;
+    color: white;
+}
+
+nav {
+    background-color: #222222;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #181818;
+}
+
+.hero h2 {
+    color: #d4af37;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+button {
+    background-color: #d4af37;
+    color: black;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    background-color: black;
+    color: #d4af37;
+    text-align: center;
+    padding: 20px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px 10px;
+}
+
+.style-card {
+    background-color: #222222;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 25px 15px;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.style-card h3 {
+    color: #d4af37;
+    font-size: 17px;
+}
+.style-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.price {
+    color: #d4af37;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+.booking-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.booking-button:hover {
+    background-color: #128C7E;
+}
+.footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+    border-top: 2px solid #d4af37;
+}
+
+.footer h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+/* Salon photo gallery */
+#salon-gallery {
+    padding: 40px 20px;
+}
+
+#salon-gallery h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.gallery {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.gallery img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+/* Full-screen salon photo viewer */
+.photo-viewer {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-viewer.active {
+    display: flex;
+}
+
+.photo-viewer img {
+    max-width: 75%;
+    max-height: 85%;
+    object-fit: contain;
+}
+
+.viewer-arrow,
+.close-viewer {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 35px;
+    padding: 15px;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 45px;
+}
+
+.viewer-arrow:hover,
+.close-viewer:hover {
+    color: gold;
+}
+/* Mobile phone photo viewer */
+@media (max-width: 600px) {
+    .photo-viewer {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .photo-viewer img {
+        max-width: 78%;
+        max-height: 70vh;
+    }
+
+    .viewer-arrow {
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .close-viewer {
+        top: 8px;
+        right: 12px;
+        font-size: 36px;
+    }
+}
